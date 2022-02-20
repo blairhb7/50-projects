@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(8, 178, 201);
+}
+
+.box {
+  display: grid;
+  grid-template-areas: 'a  b';
+  width: 200px;
+  height: 100px;
+}
+
+.Headline {
+  grid-area: a;
+  font-size: 60px;
+  padding-top: 28px;
+  padding-left: 20px;
+  font-family: sans-serif;
+  color: white;
+  text-transform: uppercase;
+  height: 200px;
+  width: 462px;
+  overflow: hidden;
+}
+
+.text {
+  display: flex;
+  font-size: 1.7em;
+  padding: 20px;
+  color: white;
+  text-align: left;
+  width: 400px;
+}
+.search {
+  grid-area: b;
+  position: relative;
+  height: 50px;
+  margin-top: 38px;
+  padding: 0;
+}
+
+.search .input {
+  background-color: white;
+  border: 0;
+  font-family: 25px;
+  height: 50px;
+  width: 50px;
+  transition: width 0.4s ease;
+  padding: 0;
+}
+
+.btn {
+  background-color: white;
+  cursor: pointer;
+  font-size: 24px;
+  border: 0;
+  left: 0;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.4s ease;
+}
+
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 200px;
+  padding: 0px 0 0 11px;
+}
+
+.search.active .btn {
+  transform: translateX(198px);
+}
